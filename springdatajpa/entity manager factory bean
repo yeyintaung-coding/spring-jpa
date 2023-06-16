@@ -1,8 +1,8 @@
 EntityManager Factory Bean(Spring ORM)
--	JPA ေရးရင္ EntityManager လုိတယ္။
--	EntityManager ကို EntityManagerFactory က ရတယ္။
--	EntityManagerFactory instance ရဖို႔ EntityManagerFactoryBean ေတြ တည္ေဆာက္ေပးရတယ္။
--	EntityManagerFactoryBean ရဲ႕ Base class က AbstractEntityManagerFactoryBean ျဖစ္တယ္။
-	-	LocalEntityManagerFactoryBean class (Standalone အတြက္)
-	-	LocalContainerEntityManagerFactoryBean (container ပတ္၀န္းက်င္အတြက္)
-ျပင္ထားေပးတယ္။
+-	JPA ရေးရင် EntityManager လိုတယ်။
+-	EntityManager ကို EntityManagerFactory က ရတယ်။
+-	EntityManagerFactory instance ရဖို့ EntityManagerFactoryBean တွေ တည်ဆောက်ပေးရတယ်။
+-	EntityManagerFactoryBean ရဲ့ Base class က AbstractEntityManagerFactoryBean ဖြစ်တယ်။
+	-	LocalEntityManagerFactoryBean class (Standalone အတွက်)
+	-	LocalContainerEntityManagerFactoryBean (container ပတ်ဝန်းကျင်အတွက်)
+ပြင်ထားပေးတယ်။

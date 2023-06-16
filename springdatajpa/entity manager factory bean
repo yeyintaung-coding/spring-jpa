@@ -6,3 +6,11 @@ EntityManager Factory Bean(Spring ORM)
 	-	LocalEntityManagerFactoryBean class (Standalone အတွက်)
 	-	LocalContainerEntityManagerFactoryBean (container ပတ်ဝန်းကျင်အတွက်)
 ပြင်ထားပေးတယ်။
+
+
+persixtence.xml က local အတွက် ဆိုထည့်ပေးရမယ်။
+global မှာတော့ မပါလည်းရတယ်။
+	
+EntityManagerFactory ဆိုတာက Persistence.createEntityManagerFactory("persistence.xml file ထဲက name")
+ဆိုပြီးတည်ဆောက်ရတာပါ။
+

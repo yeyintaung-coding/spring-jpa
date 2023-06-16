@@ -1,6 +1,6 @@
 ORM (object relational mapping)
-spring orm ကို သံုးဖို႔
-	-spring-orm (dependecny လိုတယ္)
+spring orm ကို သုံးဖို့
+	-spring-orm (dependecny လိုတယ်)
 
-JPA မွာဆိုရင္ persistence.xml လုိတယ္။
-spring-orm မွာေတာ့ ထည့္လည္းရ။မထည့္လည္းရတယ္။
+JPA မှာဆိုရင် persistence.xml လိုတယ်။
+spring-orm မှာတော့ ထည့်လည်းရ။မထည့်လည်းရတယ်။

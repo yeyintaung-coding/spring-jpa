@@ -14,3 +14,11 @@ global မှာတော့ မပါလည်းရတယ်။
 EntityManagerFactory ဆိုတာက Persistence.createEntityManagerFactory("persistence.xml file ထဲက name")
 ဆိုပြီးတည်ဆောက်ရတာပါ။
 
+
+====================================
+LocalEntityManagerFactoryBean
+
+Local Transaction အသုံးပြုရင် EntityManagerFactroy ကို Spring Context ထဲမှာ create လုပ်ပေးတယ်။
+JPA Deployment Descriptor ဖြစ်တဲ့ persistence.xml ကို /META-INF/ အောက်မှာထားပေးရမယ်။
+External DataSource သုံးလို့မရဘူး။
+global မရလို့ Enterprise မှာ မသုံးသင့်ဘူး။

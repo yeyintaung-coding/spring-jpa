@@ -1,0 +1,7 @@
+Jpa ကို spring framework မှာ အသုံးပြုလို့ရအောင်ပြင်ထားပေးတယ်။
+
+JPA နဲ့ entity တည်ဆောက်ပြီး
+spring framework ရဲ့ transaction ကို ယူသုံးထားတာကို အောက်မှာ လေ့လာနိုင်တယ်။
+
+SpringFramework ရဲ့ orm အတွက် transaction လုပ်နိုင်ဖို့
+-	LocalContainerEntityMangerFactoryBean ကို 

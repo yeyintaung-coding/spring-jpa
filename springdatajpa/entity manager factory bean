@@ -8,7 +8,7 @@ EntityManager Factory Bean(Spring ORM)
 ပြင်ထားပေးတယ်။
 
 
-persixtence.xml က local အတွက် ဆိုထည့်ပေးရမယ်။
+persistence.xml က local အတွက် ဆိုထည့်ပေးရမယ်။
 global မှာတော့ မပါလည်းရတယ်။
 	
 EntityManagerFactory ဆိုတာက Persistence.createEntityManagerFactory("persistence.xml file ထဲက name")
@@ -22,3 +22,38 @@ Local Transaction အသုံးပြုရင် EntityManagerFactroy ကိ�
 JPA Deployment Descriptor ဖြစ်တဲ့ persistence.xml ကို /META-INF/ အောက်မှာထားပေးရမယ်။
 External DataSource သုံးလို့မရဘူး။
 global မရလို့ Enterprise မှာ မသုံးသင့်ဘူး။
+
+********************* Java Base Configuration *******************************
+	@Bean
+	LocalEntityManagerFactoryBean entityManagerFactoryBean() {
+		var bean=new LocalEntityManagerFactoryBean();
+		bean.setPersistenceProviderClass(HibernatePersistenceProvider.class);
+		return bean;
+	}
+	
+	@Bean
+	JpaTransactionManager transactionManager(EntityManagerFactory emf) {
+		return new JpaTransactionManager(emf);
+	}
+
+********************* XML Base Configuration ********************************
+	<bean id="entityManagerFactoryBean" 
+		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean"
+		p:persistenceProviderClass="org.hibernate.jpa.HibernatePersistenceProvider"
+		>
+	</bean>
+	
+	<bean id="txManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager"
+		p:entityManagerFactory-ref="entityManagerFactoryBean"
+		>
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="txManager"/>
+
+Note*****
+LocalEntityManagerFactoryBean တည်ဆောက်ရင် သူ့ထဲမှာ 
+PersistenceProviderClass အနေနဲ့ HibernatePersistenceProvider ကိုထည့်ပေးရမယ်။
+
+JpaTransactionManager Bean ကို configure လုပ်ရင်လည်း
+တည်ဆောက်ထားတဲ့ EntityManagerFactory ကို ထည့်သွင်းအသုံးချပေးရမယ်။
